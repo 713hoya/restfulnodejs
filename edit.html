@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>RESTful型CRUD掲示板</title>
+</head>
+<body>
+	<h1>修正（RESTful型CRUD掲示板）</h1>
+	<hr />
+	<form method="post">
+	<filedset>
+		<legend>修正 DATA</legend>
+		<table>
+			<tr>
+				<td><label>ID<label></td>
+				<td><input type="text" name="id" value="<%= data.id %>" disabled /></td>
+			</tr>
+			<tr>
+				<td><label>品名<label></td>
+				<td><input type="text" name="name" value="<%= data.name %>" /></td>
+			</tr>
+			<tr>
+				<td><label>品番<label></td>
+				<td><input type="text" name="modelnumber" value="<%= data.modelnumber %>" /></td>
+			</tr>
+
+			<tr>
+				<td><label>品種<label></td>
+				<td><input type="text" name="series" value="<%= data.series %>" /></td>
+			</tr>
+		</table>
+		<input type="submit" />
+	</fieldset>
+	</form>
+</body>
+</html>

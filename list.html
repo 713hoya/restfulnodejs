@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>RESTful型CRUD掲示板</title>
+</head>
+<body>
+	<h1>一覧（RESTful型CRUD掲示板）</h1>
+	<a href="/insert">登録</a>
+	<hr />
+	<table width="100%" border="1">
+		<tr>
+			<th>削除</th>
+			<th>修正</th>
+			<th>ID</th>
+			<th>品名</th>
+			<th>品番</th>
+			<th>品種</th>
+		</tr>
+<% data.forEach(function (item, index) { %>
+	<tr>
+		<td style="text-align:center;"><a href="/delete/<%= item.id %>">削除</a></td>
+		<td style="text-align:center;"><a href="/edit/<%= item.id %>">修正</a></td>
+		<td><%= item.id %></td>
+		<td><%= item.name %></td>
+		<td><%= item.modelnumber %></td>
+		<td><%= item.series %></td>
+	</tr>
+<% }); %>
+	</table>
+</body>
+</html>
+
